@@ -1,0 +1,52 @@
+# Vehicle Number Plate Verification System
+# Educational / Demo Project
+
+vehicles = {
+    "LEA-1234": {
+        "owner": "Ali Ahmed",
+        "city": "Lahore",
+        "vehicle": "Toyota Corolla",
+        "model": "2022"
+    },
+    "KHI-5678": {
+        "owner": "Usman Khan",
+        "city": "Karachi",
+        "vehicle": "Honda Civic",
+        "model": "2021"
+    },
+    "MUX-9012": {
+        "owner": "Ahmed Raza",
+        "city": "Multan",
+        "vehicle": "Suzuki Alto",
+        "model": "2023"
+    },
+    "ISB-3456": {
+        "owner": "Hassan Ali",
+        "city": "Islamabad",
+        "vehicle": "Toyota Yaris",
+        "model": "2020"
+    }
+}
+
+print("=" * 45)
+print("   VEHICLE NUMBER PLATE VERIFICATION")
+print("        EDUCATIONAL DEMO")
+print("=" * 45)
+
+plate = input("Enter Vehicle Number Plate: ").upper().strip()
+
+if plate in vehicles:
+    data = vehicles[plate]
+
+    print("\nVehicle Found!")
+    print("-" * 45)
+    print("Number Plate :", plate)
+    print("Owner Name   :", data["owner"])
+    print("City         :", data["city"])
+    print("Vehicle      :", data["vehicle"])
+    print("Model        :", data["model"])
+    print("-" * 45)
+
+else:
+    print("\n❌ Vehicle record not found.")
+    print("Please check the number plate.")
